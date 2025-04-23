@@ -1,0 +1,82 @@
+/* Basic Styling for the Booking Page */
+.booking-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+    margin: auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+.booking-page{
+    height: 80vh;
+}
+}
+
+.booking-title {
+color: #dbf1ee;
+font-size: 2rem;
+margin-bottom: 10px;
+}
+
+.booking-subtitle {
+color: #005f8a;
+margin-bottom: 20px;
+text-align: center;
+}
+
+.booking-form {
+display: flex;
+flex-direction: column;
+align-items: center;
+background: rgba(255, 255, 255, 0.9);
+padding: 20px;
+border-radius: 8px;
+width: 100%;
+max-width: 500px;
+}
+
+.booking-form input,
+.date-picker {
+width: 100%;
+padding: 10px;
+margin: 10px 0;
+border-radius: 5px;
+border: 1px solid #ddd;
+font-size: 1rem;
+}
+
+.submit-button {
+background-color: #2a9d8f;
+color: #fff;
+font-size: 1.1rem;
+padding: 10px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+width: 100%;
+transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+background-color: #21867a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.booking-title {
+    font-size: 1.5rem;
+}
+
+.booking-form {
+    padding: 15px;
+}
+
+.booking-form input, .submit-button {
+    font-size: 0.9rem;
+}
+}

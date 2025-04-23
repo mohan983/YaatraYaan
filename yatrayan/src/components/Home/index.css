@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.home-container {
+  background-size: cover;
+  height: 90vh;
+  width: 100vw;
+  margin: auto;
+  padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .home-container{
+    height: 80vh;
+  }
+}
+
+.home-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 95%;
+}
+
+.home-tabs {
+  background-color: rgb(250, 248, 248);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.home-tabs button {
+  background-color: transparent;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px){
+  .home-tabs button {
+    padding: 10px 20px;
+    min-width: 150px;
+  }
+}
+
+.home-tabs button.active {
+  background-color: #dcdedf;
+  color: rgb(24, 23, 23);
+  border: none;
+}
+
+.vehicles-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+}
+
+.vehicles-error-view-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 65%;
+overflow: auto;
+}
+
+
+.home-transport-options {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  justify-content: space-between;
+  max-height: 75%;
+}
+
+@media screen and (max-width: 768px) {
+  .home-transport-options{
+    max-height: 65%;
+  }
+}
+
+.home-transport-card {
+  background-color: #e3f2fd;
+  border: 1px solid #b0bec5;
+  padding: 15px;
+  border-radius: 8px;
+  width: calc(50% - 20px);
+  margin: 5px;
+}
+
+.home-transport-card h3 {
+  color: #007acc;
+  margin-bottom: 8px;
+}
+
+.home-transport-card p {
+  margin: 5px 0;
+}
+
+.home-transport-card button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.home-transport-card button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-transport-card {
+    width: 100%;
+  }
+}

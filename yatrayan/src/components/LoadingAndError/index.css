@@ -1,0 +1,31 @@
+.failure-heading-text {
+color: #171f46;
+font-family: 'Roboto';
+font-size: 20px;
+font-weight: 500;
+line-height: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+.failure-heading-text {
+    font-size: 24px;
+}
+}
+
+.failure-description {
+text-align: center;
+color: #64748b;
+font-family: 'Roboto';
+font-size: 14px;
+width: 90%;
+max-width: 288px;
+line-height: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+.failure-description {
+    font-size: 18px;
+    width: 60%;
+    max-width: 466px;
+}
+}
