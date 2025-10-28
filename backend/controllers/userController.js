@@ -3,7 +3,6 @@ import User from "../models/userModel.js"
 export const addUser = async (req, res) => {
   try {
     const { name, mobile_number, email, gender, username, password, address } = req.body
-    // Check if user exists by Username
     const existingUser = await User.findOne({ username })
     if (existingUser) {
       return res.status(400).json({ success: false, message: "Failure: User exists" })

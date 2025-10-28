@@ -1,6 +1,5 @@
 import vehicleModel from "../models/vehicleModel.js"
 
-// Add vehicle
 export const addVehicle = async (req, res) => {
   try {
     const { category, type, vehicle_id, capacity, price, driver, operator, contact } = req.body
@@ -15,7 +14,6 @@ export const addVehicle = async (req, res) => {
   }
 }
 
-// Get all vehicles
 export const getVehicles = async (req, res) => {
   try {
     const vehicles = await vehicleModel.find({})

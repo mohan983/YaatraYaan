@@ -1,6 +1,5 @@
 import queryModel from "../models/queryModel.js"
 
-// Add query
 export const addQuery = async (req, res) => {
   try {
     const { name, mobile_number, query } = req.body
@@ -15,7 +14,6 @@ export const addQuery = async (req, res) => {
   }
 }
 
-// Get all query
 export const getQuery = async (req, res) => {
   try {
     const queries = await queryModel.find({})
