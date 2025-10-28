@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import Cookies from 'js-cookie'
 import axios from 'axios'
 import { LoadingView, FailureView } from '../LoadingAndError'
+import BASE_URL from '../../config'
 
 import './index.css'
 
@@ -29,7 +30,7 @@ const LoginForm = () => {
     setLoginApiStatus('in_progress')
     
     try {
-      const result = await axios.get(`http://localhost:4000/api/users?user=${username}`);
+      const result = await axios.get(`${BASE_URL}/api/users?user=${username}`);
       
       setLoginApiStatus('success')
       if (result.data!==null) {

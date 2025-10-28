@@ -5,6 +5,7 @@ import Cookies from 'js-cookie'
 import Header from '../Header'
 import Footer from '../Footer'
 import { LoadingView, FailureView } from '../LoadingAndError'
+import BASE_URL from '../../config'
 import './index.css'
 
 const Profile = ()=> {
@@ -14,7 +15,7 @@ const Profile = ()=> {
 
   useEffect(() => {
     const Username=Cookies.get('username')
-    axios.get(`http://localhost:4000/api/users?user=${Username}`)
+    axios.get(`${BASE_URL}/api/users?user=${Username}`)
       .then(res => {
         const user=res.data
         const updatedUserData = {name: user.name,

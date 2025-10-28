@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 import { LoadingView, FailureView } from '../LoadingAndError'
+import BASE_URL from '../../config'
 import './index.css'
 
 const SignupForm = () => {
@@ -24,7 +25,7 @@ const SignupForm = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:4000/api/users/add',
+        `${BASE_URL}/api/users/add`,
         {
           name: formData.name,
           mobile_number: formData.mobile_num,

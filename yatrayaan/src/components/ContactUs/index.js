@@ -3,6 +3,7 @@ import axios from "axios";
 import "./index.css";
 import Header from "../Header";
 import Footer from "../Footer";
+import BASE_URL from '../../config'
 
 const ContactUs = () => {
   // State hooks for form fields and feedback
@@ -26,7 +27,7 @@ const ContactUs = () => {
 
     try {
       // Post the payload to your Node.js API endpoint
-      const response = await axios.post("http://localhost:4000/api/queries/add", payload);
+      const response = await axios.post(`${BASE_URL}/api/queries/add`, payload);
       setResponseMessage(response.data.message || "Message sent successfully!");
       // Clear form fields after success
       setName("");

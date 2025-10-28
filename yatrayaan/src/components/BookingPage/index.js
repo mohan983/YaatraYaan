@@ -8,6 +8,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { LoadingView, FailureView } from '../LoadingAndError'
 import Header from '../Header'
 import Footer from '../Footer'
+import BASE_URL from '../../config'
 import './index.css'
 
 const BookingPage = () => {
@@ -83,7 +84,7 @@ const BookingPage = () => {
           }
 
     try {
-      const response = await axios.post('http://localhost:4000/api/bookings/add', bookingPayload)
+      const response = await axios.post(`${BASE_URL}/api/bookings/add`, bookingPayload)
       setBookingApiStatus('success')
       if (response.data.success) {
         alert('Successfully Booked')

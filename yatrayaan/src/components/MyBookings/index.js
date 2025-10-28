@@ -6,6 +6,7 @@ import Cookies from 'js-cookie'
 import Header from '../Header'
 import Footer from '../Footer'
 import { LoadingView, FailureView } from '../LoadingAndError'
+import BASE_URL from '../../config'
 import './index.css'
 
 const MyBookings = () => {
@@ -20,7 +21,7 @@ const MyBookings = () => {
 
     setApiStatus('in_progress')
     axios
-      .get(`http://localhost:4000/api/bookings?user=${Username}&type=${bookingType}`)
+      .get(`${BASE_URL}/api/bookings?user=${Username}&type=${bookingType}`)
       .then(res => {
         const updatedData = res.data.map((booking) => ({
           transport: booking.vehicle_type,

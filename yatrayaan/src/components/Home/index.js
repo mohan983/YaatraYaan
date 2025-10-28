@@ -4,6 +4,7 @@ import axios from 'axios'
 import Header from '../Header'
 import Footer from '../Footer'
 import { LoadingView, FailureView } from '../LoadingAndError'
+import BASE_URL from '../../config'
 import './index.css'
 
 const Home = () => {
@@ -18,8 +19,8 @@ const Home = () => {
     const fetchAllData = async () => {
       try {
         const [vehiclesRes, rentalsRes] = await Promise.all([
-          axios.get('http://localhost:4000/api/vehicles/'),
-          axios.get('http://localhost:4000/api/rentals/')
+          axios.get(`${BASE_URL}/api/vehicles/`),
+          axios.get(`${BASE_URL}/api/rentals/`)
         ])
 
         const vehicleData = vehiclesRes.data.map((v) => ({
