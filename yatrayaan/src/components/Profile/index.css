@@ -87,6 +87,6 @@
   
   @media (max-width: 768px) {
     .profile-container {
-        min-height: 80vh;
+        min-height: 80dvh;
       }
   }
